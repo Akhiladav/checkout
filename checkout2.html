@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box
+     {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 0 -16px;
+    }
+
+    .info
+     {
+      -ms-flex: 50%;
+      flex: 50%;
+    }
+
+    .struct {
+      -ms-flex: 75%;
+      flex: 75%;
+    }
+
+    .info,
+    .struct {
+      padding: 0 16px;
+    }
+
+    .container {
+      background-color: #85f8f8;
+      padding: 250px 20px 15px 250px;
+      border: 1px solid rgb(32, 236, 185);
+      border-radius: 3px;
+    }
+
+    input[type=text] {
+      width: 60%;
+      margin-bottom: 20px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    label {
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .icon-container {
+      margin-bottom: 20px;
+      padding: 7px 0;
+      font-size: 24px;
+    }
+
+    .btn {
+      background-color: #3225ebe7;
+      color: white;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      width: 60%;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .btn:hover {
+      background-color: #260c6b;
+    }
+
+    span.price {
+      float: right;
+      color: grey;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="box">
+    <div class="struct">
+      <div class="container">
+        <form name="checkout">
+
+          <div class="box">
+            <div class="info">
+              <h3>Billing Address</h3>
+              <label id="1" for="fname"><i ></i> Full Name</label>
+              <input id="2"type="text" id="fname" name="firstname" placeholder="eg: ankur">
+              <label id="3" for="email"><i ></i> Email</label>
+              <input id="4" type="text" id="email" name="email" placeholder="eg:ABC@zmail.com">
+              <label id="5" for="adr"><i ></i> Address</label>
+              <input id="6" type="text" id="adr" name="address" placeholder="enter your permanent address">
+              <label id="7"for="city"><i ></i> City</label>
+              <input id="8"type="text" id="city" name="city" placeholder="eg: Gurgaon">
+
+              <div class="box">
+                <div class="info">
+                  <label id="9" for="state">State</label>
+                  <input id="10" type="text" id="state" name="state" placeholder="eg:Haryana">
+                </div>
+                <div class="info">
+                  <label id="11" for="zip">Zip</label>
+                  <input  id="12" type="text" id="zip" name="zip" placeholder="eg:123029">
+                </div>
+              </div>
+            </div>
+
+            <div class="info">
+              <h3>Payment</h3>
+              <label  id="13" for="cname">Name on Card</label>
+              <input id="14"  type="text" id="cname" name="cardname" placeholder="eg:Ankur Atri">
+              <label  id="15" for="ccnum">Credit card number</label>
+              <input  id="16" type="text" id="ccnum" name="cardnumber" placeholder="aaaa bbbb cccc dddd">
+              <label  id="17" for="expmonth">Exp Month</label>
+              <input id="18"  type="text" id="expmonth" name="expmonth" placeholder="eg:october">
+
+              <div class="box">
+                <div class="info">
+                  <label  id="19" for="expyear">Exp Year</label>
+                  <input id="20"  type="text" id="expyear" name="expyear" placeholder="eg:2029">
+                </div>
+                <div class="info">
+                  <label  id="21" for="cvv">CVV</label>
+                  <input  id="22" type="text" id="cvv" name="cvv" placeholder="cvv">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> i agree to your <a
+              href="terms and conditions.html">terms and conditions</a>
+          </label>
+          <input type="button" name="submit_class" value="checkout" onclick="process()" class="btn">
+        </form>
+      </div>
+    </div>
+  </div>
+ <script type="text/javascript">
+ 
+function process(){
+  var name = document.getElementById("2").value;
+   var email = document.getElementById("4").value;
+   var address = document.getElementById("6").value;
+   var city= document.getElementById("8").value;
+   var state = document.getElementById("10").value;
+   var zip = document.getElementById("12").value;
+   var nameoncard = document.getElementById("14").value;
+   var cardnumber = document.getElementById("16").value;
+   var expmonth = document.getElementById("18").value;
+   var expyear = document.getElementById("20").value;
+   var cvv= document.getElementById("22").value;
+   console.log(name);
+  console.log(email);
+ console.log(address);
+  console.log(city);
+   console.log(state);
+   console.log(zip);
+   console.log(nameoncard);
+   console.log(cardnumber);
+   console.log(expmonth);
+   console.log(expyear);
+   console.log(cvv);
+}
+</script>
+</body>
+
+</html>
